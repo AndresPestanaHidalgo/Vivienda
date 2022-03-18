@@ -17,6 +17,15 @@ public class Vivienda
     private String estado;
     private String propietario;
     
+    /** constructor con los siguientes parámetros:
+     * @param pr
+     * @param nHab
+     * @param sup
+     * @param park
+     * @param es
+     * @param prop
+     */
+    
     public Vivienda (double pr,int nHab,double sup,boolean park,String es,String prop)
     {
         this.setPrecio(pr);
@@ -26,6 +35,8 @@ public class Vivienda
         this.setEstado(es);
         this.setPropietario(prop);
     }
+    
+    //* añadimos los getters*/
     
     public double getPrecio(){
         return precio;
@@ -45,6 +56,9 @@ public class Vivienda
     public String getPropietario(){
         return propietario;
     }
+    
+    //*añadimos los setters*/
+    
     public void setPrecio(double precio){
         try{
             this.precio = precio;
@@ -75,6 +89,8 @@ public class Vivienda
             this.propietario = propietario;
         }catch(Exception e){System.out.println(e);}
     }
+    
+    //* actualizamos pasando un descuento como parámetro*/
     
     public void actualizarPrecio(double descuento)
     {
